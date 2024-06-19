@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org./TR/xhtml1/DTD/hxtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>BEAGLE genetic association analysis software</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="BEAGLE genetic analysis software">
+<meta name="keywords" content="haplotype, whole genome association study">
+</head>
+
+<body>
+<h1>BEAGLE Genetic Analysis Software Package</h1>
+
+<p><font size="4">Program: BEAGLE
+<br >Version: 3.3.1
+<br >Copyright (c) 2007-2010 Brian L. Browning
+<br >Email: </font> <a href="mailto:browning@uw.edu"><font 
+size=4>browning@uw.edu</font></a><font size="4">
+<br >This page was last updated on&nbsp;26&nbsp;Dec 2010</font>      
+</p>
+
+<p></p>
+<h2 id="contents">Contents</h2>
+<ul>   
+  <li><a href="#intro"><font 
+  size=4>Introduction</font></a><font size="4"> </font>
+  <li><a href="#announce"><font size="4">New Features in&nbsp;BEAGLE 
+  3.1, 3.2, and 3.3</font>&nbsp;  </a>
+  <li><a href="#citation"><font size="4">Citation</font></a><font size="4"> 
+</font>
+  <li><a href="#example"><font size="4">An Example Beagle 
+  Analysis</font>   </a><font size="4"> </font>
+  <li><a href="#download"><font size="4">Download BEAGLE</font> </a>
+  <li><font size="4"><a 
+  href="#reference_panels">Download&nbsp;Phased&nbsp;Imputation Reference Panels 
+  </a>    </font>
+  <li><a href="#utility"><font size="4">Utility Programs</font> </a><font size="4"> 
+  </font>
+  <li><a href="#history"><font size="4">Version History</font> </a><font size="4"> 
+  </font>
+  <li><a href="#oldVersions"><font size="4">Old Versions</font> </a></li></ul>
+<p ><hr ><p>
+
+<h2 id="intro">Introduction</h2>
+<p ><font size="4">BEAGLE is a state of the art software 
+package for analysis of large-scale genetic data sets with hundreds of thousands 
+of markers genotyped on thousands of samples. BEAGLE can </font>
+
+               
+            
+<ul>
+	<li><font size="4">phase genotype data (i.e. infer 
+  haplotypes) for unrelated individuals, parent-offspring pairs, and 
+  parent-offspring trios. </font>       
+         
+  
+	<li><font size="4">infer sporadic missing genotype data. 
+  </font>     
+  
+	<li><font size="4">impute ungenotyped markers that have 
+  been genotyped in a reference panel. </font>       
+      
+  
+	<li><font size="4">perform single marker and haplotypic 
+  association analysis. </font>       
+      
+  
+	<li><font size="4">detect genetic regions that are 
+  homozygous-by-descent in an individual or identical-by-descent in pairs of 
+  individuals.</font>      </li>
+</ul><font size="4">Beagle can also be used in 
+conjunction with </font>
+
+       
+<a href="http://faculty.washington.edu/browning/presto/presto.html"><font size="4">PRESTO</font></a><font size="4">, a program for 
+fast and flexible permutation testing. PRESTO can compute empirical 
+distributions of order statistics, analyze stratified data, and determine 
+significance levels for one-stage and two-stage genetic association studies. </font>
+               
+           
+  
+<p><font size="4">BEAGLE is written in 
+Java and runs on any computing platform with a Java version 
+1.6 interpreter (e.g. Windows, Unix, Linux, Solaris, Mac).</font>
+
+                
+</p>
+
+<a href="#contents"><font 
+size=4>back to contents</font>  </a><font size="4"> </font>
+<p >
+<hr>
+ 
+<p></p>
+<p>
+<h2 id="announce">New Features in BEAGLE 3.1, 3.2, and 3.3</h2>
+<p><font size="4">BEAGLE 3.1 extends 
+BEAGLE to accept genotype likelihoods (rather than called genotypes) for 
+unrelated individuals.&nbsp;Genotype likelihoods enable genotype uncertainty to 
+be&nbsp;modelled during phasing and imputation.&nbsp;&nbsp;The methods 
+genotype likelihood methods in Beagle 3.1 have&nbsp;also been&nbsp;incorporated in the 
+<a 
+href="http://faculty.washington.edu/browning/beaglecall/beaglecall.html">BEAGLECALL</a>         
+       
+   software package for calling&nbsp;SNP&nbsp;genotypes from&nbsp;microarray&nbsp;genotype 
+data.&nbsp;<font size="3">&nbsp;</font></font>&nbsp;
+<p><font size="4"> <font size="4">BEAGLE 3.2 extends 
+BEAGLE to perform homozygosity-by-descent (HBD) detection and 
+identity-by-descent (IBD) detection for unrelated individuals.&nbsp; 
+</font></font>
+<p><font size="4">     
+           BEAGLE 3.3&nbsp;adds a&nbsp;computationally efficient&nbsp;identity-by-descent 
+detection method called fastIBD.&nbsp; The fastIBD method can 
+analyze large data sets with thousands of samples.&nbsp;</font> 
+<p><a href="#contents"><font size="4">back to contents</font> </a></p>
+<p><hr >
+
+<p></p><p>
+
+
+<h2 id="citation">Citation</h2>
+
+<p ><font size="4"> If you use BEAGLE in a published 
+analysis, please report the BEAGLE version used and cite the appropriate publication 
+or publications&nbsp;listed below. </font>
+<ol>
+<li><font size="4">BEAGLE's fastIBD 
+  method for detecting identity-by-descent is not yet published.&nbsp; We will 
+  add&nbsp;a publication reference for fastIBD to this web page as soon as 
+  it&nbsp;is available.         
+  </font><font size="4"> <br></font>
+      
+<li><font size="4">BEAGLE's methods for detecting homozygosity-by-descent and identity-by-descent are described 
+  in</font>
+        <blockquote><font size="4">    
+        S R Browning&nbsp;and B 
+    L Browning&nbsp;(2010)&nbsp; High-resolution detection of identity by descent in 
+    unrelated individuals<strong>.</strong>   &nbsp; The American Journal 
+    of Human Genetics 86:526-539.&nbsp;<a 
+  href="http://dx.doi.org/10.1016/j.ajhg.2010.02.021" 
+   ><font 
+  size=4>[link to 
+    article]</font></a></font><font size="3"> <br> </font></blockquote>
+    
+<li><font size="4">BEAGLE's methods 
+  for calling genotypes from genotype likelihood data are described 
+  in</font>
+        <blockquote><font size="4">B L 
+    Browning and Z&nbsp;Yu (2009)&nbsp; 
+    Simultaneous genotype calling and haplotype phase inference improves 
+    genotype accuracy and reduces false positive associations for genome-wide 
+    association studies<strong>.</strong>  &nbsp; The American Journal 
+    of Human Genetics 85:847-861.&nbsp;<a 
+  href="http://dx.doi.org/10.1016/j.ajhg.2009.11.004"><font 
+  size=4>[link to 
+    article]</font></a></font><font size="3"> <br> </font></blockquote>
+
+<li><font size="4">BEAGLE's methods for imputing 
+  ungenotyped markers and phasing parent-offspring trios are described in 
+</font>         
+  
+
+<blockquote><font size="4">B L Browning and S R Browning 
+    (2009) A unified approach to genotype imputation and haplotype phase 
+    inference for large data sets of trios and unrelated individuals. Am J Hum 
+    Genet 84:210-223. </font>
+                
+                
+<a href="http://dx.doi.org/10.1016/j.ajhg.2009.01.005"><font size="4">[link to article]</font>  </a><font size="4"> 
+    </font>
+</blockquote>
+
+
+<li><font size="4">BEAGLE's methods for inferring haplotype 
+  phase or sporadic missing data in unrelated individuals are described in 
+  </font>             
+  
+
+<blockquote><font size="4">S R Browning and B L Browning 
+    (2007) Rapid and accurate haplotype phasing and missing data inference for 
+    whole genome association studies using localized haplotype clustering. Am J 
+    Hum Genet 81:1084-1097. </font>
+            
+          
+       
+<a href="http://dx.doi.org/10.1086/521987"><font size="4">[link to article]</font>
+  </a>
+</blockquote>
+
+<li><font size="4">BEAGLE's methods for association testing 
+  are described in </font>       
+
+<blockquote><font size="4">B L Browning and S R Browning 
+    (2007) Efficient multilocus association mapping for whole genome association 
+    studies using localized haplotype clustering. Genet Epidemiol 31:365-375. 
+    </font>
+
+<a href="http://dx.doi.org/10.1002/gepi.20216"><font size="4">[link to article]</font></a>
+</blockquote>
+
+<li><font size="4">BEAGLE's haplotype frequency model was first described in: </font>
+<p></p>
+<blockquote><font size="4">S R Browning (2006) Multilocus 
+    association mapping using variable-length Markov chains. Am J Hum Genet 
+    78:903-13. </font>
+        
+      
+<a href="http://download.ajhg.org/AJHG/pdf/PIIS0002929707639135.pdf"><font size="4">[link to article]</font>
+  </a></blockquote></li>
+</ol>
+<p >
+
+<a href="#contents"><font size="4">back to contents</font>  </a>
+<p ><hr ><p>
+
+
+<h2 id="example">An Example Beagle Analysis</h2>
+<p ><font size="4">       A&nbsp;BEAGLE&nbsp;analysis 
+of&nbsp;a large genome-wide association study is described in the following 
+paper:&nbsp;</font>
+
+              
+         
+ 
+
+<blockquote>
+  <p><font size="4">B L Browning and S R Browning (2008) Haplotypic analysis of 
+  Wellcome Trust Case Control Consortium data. Human Genetics 123:273-280. 
+  </font>
+                
+   <a href="http://dx.doi.org/10.1007/s00439-008-0472-1"><font size="4">[link to article]</font>
+  </a><font size="4"> 
+  </font></p>
+</blockquote>
+
+<p ><font size="4">The&nbsp;preceding 
+reference&nbsp;describes strategies 
+for&nbsp;eliminating false-positive associations due to genotyping artefacts.&nbsp; However, in our 
+experience, a much better way to&nbsp;eliminate false-positive 
+associations due to genotyping artefacts is to simultaneously call and phase genotypes using 
+</font><a 
+href="http://faculty.washington.edu/browning/beaglecall/beaglecall.html"><font 
+size=4>BEAGLECALL</font></a><font size="4"> prior to performing a haplotypic 
+analysis using BEAGLE.</font>
+
+<p >
+<a href="#contents"><font size="4">back to contents</font>  </a><font size="4"> 
+</font>
+<p ><font size="4"></font><hr ><p>
+
+
+<h2 id="download"> Download BEAGLE</h2>
+
+
+<p ><font size="4">You may download and use the BEAGLE 
+executable file for non-commercial and commercial research.&nbsp;&nbsp; BEAGLE 
+is distributed on an "AS IS" basis.&nbsp; There is NO WARRANTY for the program, 
+to the extent permitted by applicable law.&nbsp;&nbsp; In no event unless 
+required by applicable law will any BEAGLE copyright holder be liable to you for 
+damages, including any general, special, incidental or consequential damages 
+arising out of the use or inability to use the program (including but not 
+limited to loss of data or data being rendered inaccurate or losses sustained by 
+you or third parties or a failure of the program to operate with any other 
+programs).</font>  </p>
+<p ><font size="4">The following files are available for 
+download:</font>
+
+
+        
+
+<ol>
+	<li><a href="beagle_3.3_26Dec10.pdf"><font 
+  size=4>beagle_3.3_26Dec10.pdf</font></a><font size="4"> -&nbsp;The documentation 
+  for BEAGLE. </font>  
+      
+  
+	<li><a href="beagle.jar"><font 
+  size=4>beagle.jar</font></a><font size="4"> -&nbsp;The BEAGLE executable 
+  file.</font>  
+         
+  
+	<li><a href="beagle_example.zip"><font 
+  size=4>beagle_example.zip</font></a><font size="4"> -&nbsp;A ZIP-compressed 
+  directory with example input and output files from a BEAGLE analysis.&nbsp; 
+  The analysis of the example files is described in the BEAGLE 
+  documentation.</font></li>
+</ol>
+<p><font size="4"></font>
+
+<p>
+
+<a href="#contents"><font size="4">back to contents</font>  </a></p><hr >
+
+<p></p><p>
+
+
+<h2 id="reference_panels">  Download Phased Imputation Reference Panels</h2>
+
+
+<p ><font size="4">       
+        
+              
+           
+              
+         
+              
+              
+   Phased genotype data 
+in BEAGLE format from&nbsp;individuals sequenced by&nbsp;the <a 
+href="http://www.1000genomes.org/">1000 Genomes Project</a>       
+        
+              
+           
+              
+         
+              
+              
+          (2010.08.04 sequence index) are&nbsp;available for 
+download:</font>  </p>
+
+
+        
+
+<ol>
+	<li><font size="4"><a 
+  href="AFR.1000Genomes.20100804.beagle.zip">AFR.1000Genomes.20100804.beagle.zip</a><font 
+  > -&nbsp;174 individual that 
+  originate&nbsp;from Africa.&nbsp; </font></font>  
+      
+  
+	<li><font size="4"><font 
+  ><a 
+  href="ASN.1000Genomes.20100804.beagle.zip">ASN.1000Genomes.20100804.beagle.zip</a></font><font 
+  > -&nbsp;194 individuals that originate from 
+  Asia.</font></font>  
+         
+  
+	<li><font size="4"><a 
+  href="EUR.1000Genomes.20100804.beagle.zip">EUR.1000Genomes.20100804.beagle.zip</a>   
+             
+        &nbsp;-&nbsp;283 individuals that originate from 
+  Europe.</font></li>
+</ol>  
+         
+  
+	<p><font size="4">The BEAGLE-format files&nbsp;were created 
+from&nbsp;corresponding MACH-format files. Information&nbsp;regarding the 
+samples in each file and the marker filters&nbsp;applied is available from the 
+<a 
+href="http://www.sph.umich.edu/csg/abecasis/MACH/download/1000G-2010-08.html">MACH 
+web site</a>.&nbsp; The phasing of the data in these files was performed by the 
+Broad Institute using BEAGLE.&nbsp; Some individuals of admixed ancestry are 
+included in more than one&nbsp;file.</font></p>  
+         
+  
+	<p>
+
+<a href="#contents"><font size="4">back to contents</font>  </a></p>
+
+<p><hr >
+
+<p></p><p>
+
+<h2 id="utility">Utility Programs</h2>
+<p><font size="4">The <a href="http://faculty.washington.edu/browning/beagle_utilities/utilities.html"><font 
+size=4>BEAGLE Utilities</font></a><font size="4"> web      
+        
+ site has&nbsp;a</font> number of utility programs that can be used to            
+   prepare input files and process output files.&nbsp; </font></p>
+
+<p><font size="4">When using 
+multiple Beagle input files, the alleles for a marker must be on the same 
+chromosome strand in each input file.&nbsp; Sharon Browning has written a python 
+script that checks that alleles are defined with respect to the same chromosome 
+strand and switches alleles if necessary to make the chromosome strands 
+consistent.&nbsp; </font>
+
+
+<a href="http://faculty.washington.edu/sguy/beagle/strand_switching/strand_switching.html"><font size="4">
+Click here</font></a><font size="4"> to download Sharon's 
+strand-checking utility.</font>
+
+<p><font size="4">Sharon Browning has written 
+some&nbsp;utilities for processing output files from&nbsp;BEAGLE HBD/IBD 
+analysis.&nbsp; </font>
+
+
+<a href="http://faculty.washington.edu/sguy/beagle/ibd_and_hbd/ibd_and_hbd.html"><font size="4">
+Click here</font></a><font size="4"> to download Sharon's 
+HBD/IBD utilities.</font>
+<p><font size="4">When dealing with large sample sizes, it might be necessary to 
+divide&nbsp;a sample so that imputation can be performed in each subsample 
+separately.&nbsp; </font><a href="divide.sample"><font size="4">Click 
+here</font></a><font size="4"> to download a simple shell script for dividing your 
+sample.</font></p></font>
+
+<p><font size="4">Two specialized programs, pseudomarker.jar 
+and cluster2haps.jar,&nbsp;are described in the BEAGLE documentation, and may be 
+useful to some users:</font>
+<ul>
+  <li>
+<div><a href="pseudomarker.jar"><font 
+  size=4>pseudomarker.jar</font></a><font size="4"> - A utility program for 
+  creating a phased Beagle file of pseudomarkers from a Beagle output model 
+  (.dag) file.</font></div>
+  <li>
+<div><a href="cluster2haps.jar"><font 
+  size=4>cluster2haps.jar</font></a><font size="4"> - A utility program for 
+  identifying allele sequences that define a haplotype cluster that is 
+  associated with a trait.</font></div></li></ul>    
+<p>
+
+<a href="#contents"><font size="4">back to contents</font>  </a></p><font size="4"> 
+</font>
+<p ><font size="4"></font><hr ><p>
+
+
+<h2 id="history">Version History</h2>
+
+<ul>
+	<li><font size="4">Version 1.0.1 (18 Sep 2006): First 
+  public release of BEAGLE (association analysis of phase-known data) </font>         
+        
+  
+	<li><font size="4">Version 2.1.1 (23 Apr 2007): Major new 
+  release. Added haplotype and missing data inference to BEAGLE. </font>         
+         
+  
+	<li><font size="4">Version 2.1.2 (30 Jul 2007): Minor bug 
+  fix. </font>        
+  
+	<li><font size="4">Version 2.1.3 (14 Sep 2007): Minor bug 
+  fix. </font>        
+  
+	<li><font size="4">Version 3.0.1 (11 Nov 2008): Major new 
+  release. Added trio phasing and imputation of ungenotyped markers. </font>         
+         
+  
+	<li><font size="4">Version 3.0.2 (09 Feb 2009): Minor bug 
+  fix. </font>        
+  
+	<li><font size="4">Version 3.0.3 (11 Apr 2009): Minor bug 
+  fix. </font>        
+  
+	<li><font size="4">Version 3.0.4 (09 May 2009): Minor bug 
+  fix. </font>        
+  
+	<li><font size="4">Version 3.1.0 (03 Dec 
+  2009):&nbsp;Added&nbsp;imputation and phasing of&nbsp;genotype likelihoods for 
+  unrelated individuals. </font>       
+      
+          
+  
+	<li><font size="4">Version 3.1.1 (09 Dec 2009): Minor 
+  change to implementation. </font>       
+      
+          
+  
+	<li><font size="4">Version 3.2.0 (29 Mar 2010): 
+  Added&nbsp;homozygosity-by-descent and&nbsp;identity-by-descent detection 
+  methods. </font>       
+           
+      
+  
+	<li><font size="4">Version 3.2.1 (20 May 2010): Minor bug 
+  fix; added "redundant" option to print redundant child haplotypes for 
+  parent-offspring pairs and trios. </font>       
+           
+      
+  
+	<li><font size="4">Version 3.3.0 (15 Nov 2010): Added 
+  fastIBD method, reduced memory usage, added allele dosage (.dose.gz) output 
+  files.</font>       
+           
+      
+  
+	<li><font size="4">Version 3.3.1 (26 Dec 2010): Minor bug 
+  fix</font>       
+               
+           
+           
+     </li>
+</ul>
+<p >
+
+<a href="#contents"><font size="4">back to contents</font>  </a> <font size="4">
+<p ></p></font><hr ><p>
+
+<h2 id="oldVersions">Old&nbsp;Versions</h2>
+<p >
+
+<ul>
+<li><a href="recent.versions/beagle_2.1.3_release_9.Nov.07.zip" ><font 
+  size=4>version 2.1.3</font> </a><font size="4">&nbsp;- Note: the BEAGLE user 
+  interface differs between version 2.1 and version 3.0. </font>
+      
+        
+  
+
+<li><font size="4"><a 
+  href="recent.versions/beagle_3.0.4_05May09.zip">version 
+3.0.4</a> </font>
+      
+        
+  
+
+<li><a 
+  href="recent.versions/beagle_3.1.1_09Dec09.zip"><font size="4">version 
+  3.1.1</font> 
+</a>
+      
+        
+  
+
+<li><font size="4"><a 
+  href="recent.versions/beagle_3.2.1_20May10.zip">version 
+3.2.1</a></font></li>
+
+</ul>
+
+<p >
+<a href="#contents"><font size="4">back to 
+contents</font>  </a></p>
+
+</body>
+</html>

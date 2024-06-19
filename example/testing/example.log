@@ -1,0 +1,33 @@
+Beagle version 3.3.1 (26 Dec 2010)
+Enter "java -jar beagle.jar" for summary of command line arguments.
+Start time: 08:59 AM PST on 26 Dec 2010
+
+Command line: java -Xmx444m -jar beagle.jar
+  data=data.bgl
+  trait=T2D
+  out=example
+
+Running time for building model: 1 seconds
+number of markers    =     200
+number of haplotypes =    4000
+
+Graphical Model statistics:
+
+mean nodes/level =   4.58  max nodes/level =  11  nodes = 915
+mean edges/level =   6.86  max edges/level =  17  edges = 1371
+mean edges/node  =   1.50  mean count/node = 874.32
+
+Alleles with permutation p-values less than 0.20:
+
+Marker         	 Allele	  allelic_p	      min_p	 min_p_perm
+m23058         	      0	  0.0004167	  0.0004167	     0.1179
+m23612         	      0	  0.0002015	  0.0002015	    0.06593
+m24828         	      0	  0.0006412	  0.0006412	     0.1908
+m23171         	    7.1	  0.0002056	  0.0002056	    0.06593
+m23892         	   10.1	  4.559e-05	  4.559e-05	    0.01898
+m24828         	    2.1	  0.0006412	  0.0006412	     0.1908
+
+6 alleles with permutation p-value < 0.2
+
+Running time for testing model: 3 seconds
+Beagle version 3.3.1 (26 Dec 2010) finished

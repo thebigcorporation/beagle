@@ -1,26 +1,23 @@
-cluster2haps 1.0
+usage: java -jar cluster2haps.jar [arguments]
 
-Command line syntax: java -jar cluster2haps.jar [arguments]
-
-arguments are...
-  dag=<Beagle .dag file>                    (required)
-  phased=<phased BEAGLE file>               (required)
-  trait=<trait identifier>                  (required)
-  out=<output file>                         (required)
-  marker=<marker identifier>                (required)
-  parent=<parent node number>               (required)
-  allele=<allele code>                      (required)
-  maxhaps=<maximum haplotypes>              (optional: default=8)
-
+where [arguments] are ...
+  dag=<dag file>                           (required)
+  phased=<phased BEAGLE file>              (required)
+  trait=<trait identifier>                 (required)
+  out=<output file>                        (required)
+  marker=<marker identifier>               (required)
+  parent=<parent node identifier>          (required)
+  allele=<allele identifier>               (required)
+  maxhaps=<maximum haplotypes>             (optional: default=8)
 
 Command line: java -jar cluster2haps.jar 
-  dag=data.bgl.dag
+  dag=example.data.bgl.dag.gz
   phased=data.bgl
   trait=T2D
   marker=m23892
-  parent=9
+  parent=10
   allele=1
-  out=m23892_9_1.haps
+  out=m23892_10_1.haps
 
  4000 haplotypes: 2000 cases/2000 controls
                   201 in cluster/3799 not in cluster
