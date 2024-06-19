@@ -34,6 +34,7 @@ java -jar beagle.jar phased=${ref} unphased=${sample}.${z} missing=${missing} ma
 
 java -jar paste.jar 2 out.[1-9][0-9].${sample}.[1-9][0-9].phased.gz | gzip > ${sample}.phased.gz
 java -jar paste.jar 3 out.[1-9][0-9].${sample}.[1-9][0-9].gprobs.gz | gzip > ${sample}.gprobs.gz
+java -jar paste.jar 3 out.[1-9][0-9].${sample}.[1-9][0-9].dose.gz | gzip > ${sample}.dose.gz
 java -jar paste.jar 1 out.[1-9][0-9].${sample}.[1-9][0-9].r2 > ${sample}.r2
 cat out.[1-9][0-9].log > ${sample}.log
 

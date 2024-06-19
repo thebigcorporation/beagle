@@ -1,6 +1,6 @@
-Beagle version 3.3.1 (26 Dec 2010)
+Beagle version 3.3.2 (31 Oct 2011)
 Enter "java -jar beagle.jar" for summary of command line arguments.
-Start time: 08:59 AM PST on 26 Dec 2010
+Start time: 04:56 PM PDT on 31 Oct 2011
 
 Command line: java -Xmx88m -jar beagle.jar
   markers=hapmap.markers
@@ -13,5 +13,5 @@ number of markers    =     100
 number of haplotypes =       4 (hapmap.unphased.bgl)
 number of haplotypes =     116 (hapmap.phased.bgl)
 
-Running time for phasing: 1 seconds
-Beagle version 3.3.1 (26 Dec 2010) finished
+Running time for phasing: 0 seconds
+Beagle version 3.3.2 (31 Oct 2011) finished

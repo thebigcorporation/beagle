@@ -1,6 +1,6 @@
-Beagle version 3.3.1 (26 Dec 2010)
+Beagle version 3.3.2 (31 Oct 2011)
 Enter "java -jar beagle.jar" for summary of command line arguments.
-Start time: 08:59 AM PST on 26 Dec 2010
+Start time: 04:56 PM PDT on 31 Oct 2011
 
 Command line: java -Xmx444m -jar beagle.jar
   data=data.bgl
@@ -30,4 +30,4 @@ m24828         	    2.1	  0.0006412	  0.0006412	     0.1908
 6 alleles with permutation p-value < 0.2
 
 Running time for testing model: 3 seconds
-Beagle version 3.3.1 (26 Dec 2010) finished
+Beagle version 3.3.2 (31 Oct 2011) finished
