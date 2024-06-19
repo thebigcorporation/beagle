@@ -1,0 +1,68 @@
+
+Command line syntax: java -jar beagle.jar [arguments]
+
+arguments for phasing and imputing data ...
+  unphased=<unphased data file>                     (optional)
+  phased=<phased data file>                         (optional)
+  pairs=<unphased pair data file>                   (optional)
+  trios=<unphased trio data file>                   (optional)
+  markers=<markers file>                            (optional)
+  missing=<missing allele code>                     (optional)
+  log=<log file prefix>                             (required)
+  out=<output file prefix>                          (optional)
+  gprobs=<true/false>                               (optional: default=true)
+  nimputations=<imputations/individual>             (optional: default=0)
+  lowmem=<true/false>                               (optional: default=false)
+  nsamples=<samples/individual>                     (optional: default=4)
+  niterations=<number of iterations>                (optional: default=10)
+  excludecolumns=<excluded columns>                 (optional)
+  excludemarkers=<excluded markers>                 (optional)
+  seed=<random seed>                                (optional: default=-99999)
+
+arguments for association testing ...
+  data=<phased Beagle file>                         (optional)
+  trait=<affection status identifier>               (optional)
+  markers=<markers file>                            (optional)
+  out=<output file prefix>                          (optional)
+  nperms=<number of permutations>                   (optional: default=1000)
+  test=<association tests>                          (optional: default=a)
+  diplotypes=<true/false>                           (optional: default=true)
+  seed=<random seed>                                (optional: default=-99999)
+  scale=<threshold scale>                           (optional: default=4.0)
+  shift=<threshold shift>                           (optional: default=0.2)
+
+<association tests> determines the tests that will be performed, and is one or
+more characters from the string "ardo". Example: "test=a" or "test=ard" where
+  a = allelic test
+  r = recessive test     (groups major allele homozygotes and heterozygotes)
+  d = dominant test      (groups minor allele homozygotes and heterozygotes)
+  o = overdominant test  (groups minor and major allele homozygotes)
+
+Command line: java -jar beagle.jar 
+  data=data.bgl
+  trait=T2D
+
+Running time for building model: 1 seconds
+number of markers    =     200
+number of haplotypes =    4000
+
+Graphical Model statistics:
+
+mean nodes/level =  4.6  max nodes/level = 11  nodes = 914
+mean edges/level =  6.9  max edges/level = 17  edges = 1371
+mean edges/node  =  1.5  mean count/node = 875.3
+
+Alleles with permutation p-values less than 0.20:
+
+Marker         	 Allele	  allelic_p	      min_p	 min_p_perm
+m23058         	      0	  0.0004167	  0.0004167	     0.1179
+m23612         	      0	  0.0002015	  0.0002015	    0.06593
+m24828         	      0	  0.0006412	  0.0006412	     0.1908
+m23171         	    2.1	  0.0002056	  0.0002056	    0.06593
+m23892         	    9.1	  4.559e-05	  4.559e-05	    0.01898
+m24828         	    1.1	  0.0006412	  0.0006412	     0.1908
+
+6 alleles with permutation p-value < 0.2
+
+Running time for testing model: 3 seconds
+Beagle version 3.0.4 finished

@@ -1,0 +1,53 @@
+
+Command line syntax: java -jar beagle.jar [arguments]
+
+arguments for phasing and imputing data ...
+  unphased=<unphased data file>                     (optional)
+  phased=<phased data file>                         (optional)
+  pairs=<unphased pair data file>                   (optional)
+  trios=<unphased trio data file>                   (optional)
+  markers=<markers file>                            (optional)
+  missing=<missing allele code>                     (optional)
+  log=<log file prefix>                             (required)
+  out=<output file prefix>                          (optional)
+  gprobs=<true/false>                               (optional: default=true)
+  nimputations=<imputations/individual>             (optional: default=0)
+  lowmem=<true/false>                               (optional: default=false)
+  nsamples=<samples/individual>                     (optional: default=4)
+  niterations=<number of iterations>                (optional: default=10)
+  excludecolumns=<excluded columns>                 (optional)
+  excludemarkers=<excluded markers>                 (optional)
+  seed=<random seed>                                (optional: default=-99999)
+
+arguments for association testing ...
+  data=<phased Beagle file>                         (optional)
+  trait=<affection status identifier>               (optional)
+  markers=<markers file>                            (optional)
+  out=<output file prefix>                          (optional)
+  nperms=<number of permutations>                   (optional: default=1000)
+  test=<association tests>                          (optional: default=a)
+  diplotypes=<true/false>                           (optional: default=true)
+  seed=<random seed>                                (optional: default=-99999)
+  scale=<threshold scale>                           (optional: default=4.0)
+  shift=<threshold shift>                           (optional: default=0.2)
+
+<association tests> determines the tests that will be performed, and is one or
+more characters from the string "ardo". Example: "test=a" or "test=ard" where
+  a = allelic test
+  r = recessive test     (groups major allele homozygotes and heterozygotes)
+  d = dominant test      (groups minor allele homozygotes and heterozygotes)
+  o = overdominant test  (groups minor and major allele homozygotes)
+
+Command line: java -jar beagle.jar 
+  markers=hapmap.markers
+  phased=hapmap.phased.bgl
+  unphased=hapmap.unphased.bgl
+  missing=?
+  log=imputation
+
+number of markers    =     100
+number of haplotypes =       4 (hapmap.unphased.bgl)
+number of haplotypes =     116 (hapmap.phased.bgl)
+
+Running time for phasing: 2 seconds
+Beagle version 3.0.4 finished
